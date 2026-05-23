@@ -1,0 +1,215 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:white;
+  font-family:Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  background:black;
+  z-index:1000;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+.logo span{
+  color:red;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:red;
+}
+
+
+/* HERO */
+
+.hero{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  background:
+  linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1400&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-text h1{
+  font-size:90px;
+  line-height:95px;
+  letter-spacing:4px;
+}
+
+.hero-text p{
+  margin-top:20px;
+  font-size:18px;
+  color:#ccc;
+}
+
+.hero-text button{
+  margin-top:30px;
+  padding:15px 40px;
+  background:red;
+  color:white;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero-text button:hover{
+  background:white;
+  color:black;
+}
+
+
+/* COLLECTION */
+
+.collection{
+  padding:100px 8%;
+}
+
+.collection h2{
+  font-size:45px;
+  margin-bottom:50px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  overflow:hidden;
+  border:1px solid #222;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:red;
+}
+
+.card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:20px;
+  text-align:center;
+}
+
+
+/* ABOUT */
+
+.about{
+  padding:100px 8%;
+  background:#0d0d0d;
+}
+
+.about h2{
+  font-size:45px;
+  margin-bottom:20px;
+}
+
+.about p{
+  color:#bbb;
+  max-width:700px;
+  line-height:30px;
+}
+
+
+/* FOOTER */
+
+footer{
+  padding:50px 8%;
+  text-align:center;
+}
+
+footer h3{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+footer p{
+  color:#888;
+}
+
+.socials{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.socials a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  color:red;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .hero-text h1{
+    font-size:55px;
+    line-height:60px;
+  }
+
+  .collection h2,
+  .about h2{
+    font-size:35px;
+  }
+
+}
